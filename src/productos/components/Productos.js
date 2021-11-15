@@ -1,35 +1,35 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-const Zapatos1 = ({ Zapatos }) => {
+const Productos1 = ({ Productos }) => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Header>
         <center>
-          <h2>{Zapatos.marca}</h2>
+          <h2>{Productos.marca}</h2>
         </center>
       </Card.Header>
       <Card.Img
         variant="top"
-        src={Zapatos.url}
+        src={Productos.url}
         width={300}
         height={300}
         alt="300x300"
         rounded
       />
       <Card.Body>
-        <Card.Title>{Zapatos.title}</Card.Title>
-        <Card.Text>{Zapatos.description}</Card.Text>
+        <Card.Title>{Productos.title}</Card.Title>
+        <Card.Text>{Productos.description}</Card.Text>
         <Button variant="danger" size="sm">
-          ${Zapatos.price}
+          ${Productos.price}
         </Button>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <Button variant="danger" size="sm">
-          {Zapatos.category}
+          {Productos.category}
         </Button>
       </Card.Body>
     </Card>
   );
 };
 
-export default Zapatos1;
+export default Productos1;
