@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 //import GoogleLogin from "react-google-login";
-import { useAuth0 } from "@auth0/auth0-react";
+import { Auth0Provider } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 
 const HeaderButtons = ({ isLoggedIn, setLogin}) => {
@@ -76,24 +76,15 @@ const HeaderButtons = ({ isLoggedIn, setLogin}) => {
   } else {
     return (
       <div>
-        <GoogleLogin
-          clientId="1072646916283-tuqtgn75i6kb0p8u8reg1u75d9n88id3.apps.googleusercontent.com"
+        <Auth0Provider
+          domain="electro1.us.auth0.com"
+          clientId="7ueo25P1ucl2X2kToNqfmSjMl39Xs0IU"
           buttonText="Login"
           onSuccess={login}
           onFailure={loginError}
           cookiePolicy={"single_host_origin"}
+          //redirectUri={window.location.origin}
         />
-
-ReactDOM.render(
-  <Auth0Provider
-    domain="dev-v77lnzyt.us.auth0.com"
-    clientId="DyJYCkQAZDU2YHJiIymucYrzmW46LpBF"
-    redirectUri={window.location.origin}
-  >
-    <App />
-  </Auth0Provider>,
-  document.getElementById("root")
-);
 
       </div>
     );
