@@ -1,3 +1,4 @@
+import { Auth0Provider } from "@auth0/auth0-react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -51,7 +52,15 @@ function App() {
     }
   }, []);
 
+
   return (
+
+    <Auth0Provider
+        domain="electro1.us.auth0.com"
+        clientId="nj8hEn1lm0LFxtRwJ5guZHZbEygoxdaq"
+        redirectUri={window.location.origin}
+          > 
+
     <Router>
       <Header
         isLoggedIn={logged}
@@ -111,7 +120,9 @@ function App() {
         <Redirect to="/" />
       </Switch>
     </Router>
+    </Auth0Provider>
   );
+
 }
 
 export default App;
