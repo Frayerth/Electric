@@ -5,14 +5,10 @@ import VentaForm from "../components/VentasForm";
 
 const SistemaVentas = ({ ventas, setVentas }) => {
   const categorias = [
-    { id: 1, nombre: "Moderno" },
-    { id: 2, nombre: "Informal" },
-    { id: 3, nombre: "Bohemio" },
-    { id: 4, nombre: "Clasico" },
-    { id: 5, nombre: "Deportes" },
-    { id: 6, nombre: "Elegante" },
-    { id: 7, nombre: "Casual" },
-    { id: 8, nombre: "Juvenil" },
+    { id: 1, nombre: "Hogar" },
+    { id: 2, nombre: "Iluminacion" },
+    { id: 3, nombre: "Industria" },
+    { id: 4, nombre: "Paneles solares" },
   ];
 
   const vendedores = [
